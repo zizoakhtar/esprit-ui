@@ -1,0 +1,146 @@
+<br><br><br><br>
+<h2>
+   </h2>
+
+<div class="container"> <!-- Links -->
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <img src="../../../assets/image/a.jpg" style="width: 210px;">
+
+    </div>
+
+    <ul class="list-unstyled components">
+
+      <li>
+        <a href="/convention" (click)="ceci()">Convention </a>
+
+      </li>
+      <li>
+        <a href="/convention" routerLink="convention">Convention </a>
+      </li>
+      <li>
+        <a href="#">Blog</a>
+      </li>
+      <li>
+        <a href="#">Acerca</a>
+      </li>
+      <li>
+        <a href="#">contacto</a>
+      </li>
+
+
+    </ul>
+
+
+  </nav>
+
+  <!-- Page Content Holder -->
+  <div id="contente">
+
+        <form
+          name="form"
+          #f="ngForm"
+          novalidate
+        >
+
+
+
+          <div class="form-group">
+            <mat-form-field class="example-full-width">
+              <mat-label> Email</mat-label>
+              <input matInput value="    {{ currentUser.email}}
+">
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <mat-form-field class="example-full-width">
+              <mat-label> Thème</mat-label>
+              <input matInput>
+            </mat-form-field>
+
+          </div>
+          <table class="example-full-width" cellspacing="0"><tr>
+            <td><mat-form-field class="example-full-width">
+              <mat-label>Date début du stage</mat-label>
+              <input matInput type="date" >
+
+            </mat-form-field></td>
+            <td><mat-form-field class="example-full-width">
+              <mat-label>Date fin du stage</mat-label>
+              <input matInput type="date" >
+
+            </mat-form-field></td>
+          </tr></table>
+          <div class="form-group">
+            <mat-form-field class="example-full-width">
+              <mat-label> Encadrant_ecole</mat-label>
+              <input matInput>
+            </mat-form-field>
+
+          </div>
+          <table class="example-full-width" cellspacing="0"><tr>
+            <td><mat-form-field class="example-full-width">
+              <mat-label> Entreprise</mat-label>
+              <input matInput>
+            </mat-form-field></td>
+            <td><mat-form-field class="example-full-width">
+              <mat-label> Email</mat-label>
+              <input matInput>
+            </mat-form-field></td>
+          </tr></table>
+          <div class="form-group">
+            <mat-form-field class="example-full-width">
+              <mat-label> Adresse</mat-label>
+              <input matInput>
+            </mat-form-field>
+
+          </div>
+          <table class="example-full-width" cellspacing="0"><tr>
+            <td><mat-form-field class="example-full-width">
+              <mat-label> Encadrant_entreprise</mat-label>
+              <input matInput>
+            </mat-form-field></td>
+            <td><mat-form-field class="example-full-width">
+              <mat-label> Email</mat-label>
+              <input matInput>
+            </mat-form-field></td>
+          </tr></table>
+
+
+          <div class="form-group">
+            <button mat-raised-button (click)="onSubmit()" color="primary">Registration</button>
+
+          </div>
+        </form>
+
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        </div>
+      </div>
+
+
+  </div>
+
+
+
+
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<!-- Bootstrap Js CDN -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+
+
+    $('#sidebarCollapse').on('click', function () {
+      $('#sidebar, #content').toggleClass('active');
+      $('.collapse.in').toggleClass('in');
+      $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+    });
+  });
+</script>

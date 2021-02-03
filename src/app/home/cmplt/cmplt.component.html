@@ -1,0 +1,59 @@
+<div class="what-we-do">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h4>QUI SOMMES NOUS?</h4>
+        <p>    Nous sommes une équipe  qui ont souvent vécu l'aventure de trouver le stage
+            parfait. Avec des passions et des centres d'intérêt différents, nous avons décidé que chacun serait utile
+            pour une candidature combinant le processus de recherche d'étudiants avec le recrutement de candidats par
+            les entreprises.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="wrapper">
+          <div class="col-md-12">
+            <div class="row">
+              <ul class="tabs clearfix">
+
+                <li *ngFor="let item of items" class="col-md-15 col-sm-12 col-xs-12">
+                  <div class="list-item" (click)="toggle(items, item)">
+                    <div class="icon">
+                      <img class="imagine" [src]=item.icon [alt]=item.title>
+                    </div>
+                    <h4>{{item.title}}</h4>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div *ngFor="let item of items" >
+              <div class="row" [hidden]="item.hidden">
+                <div class="tab-content-services">
+                  <div class="col-md-6">
+                    <div class="left-text">
+                      <h4>{{item.title}}</h4>
+                      <p>{{item.text}}</p>
+                      <div class="primary-button">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="right-image">
+                      <img [src]=item.icontext alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
